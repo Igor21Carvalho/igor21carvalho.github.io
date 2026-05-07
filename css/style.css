@@ -30,6 +30,10 @@ body, html {
   align-items: baseline;
   display: flex;
 }
+
+.close-menu {
+  display: none;
+}
 /* LOGO */
 .nav-logo img {
   height: 50px;
@@ -432,7 +436,7 @@ img {
     cursor: pointer;
     z-index: 20;
     align-self: center;
-    
+    margin-right: 10px;
   }
 
   .menu-toggle-auth {
@@ -445,65 +449,109 @@ img {
 
   .auth-buttons {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .auth-buttons .login,
+  .auth-buttons .signup {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .auth-buttons .login:hover {
+    background: #ff4757;
+    border-color: #ff4757;
+    transform: scale(1.05);
+  }
+
+  .auth-buttons .signup:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: scale(1.05);
   }
 
   .nav-menu {
     display: none;
-    position: absolute;
-    top: 100%;
-    right: 10%;
-    width: 25%;
-    background-color: rgba(0, 132, 255, 0.821);
-    
-    border-top: 1px solid #39a3ff;
-    z-index: 15;
-    border-radius: 0,0, 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0.95), rgba(0, 0, 0, 0.8));
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 101;
+    transition: transform 0.2s ease;
+    display: block;
+  }
+
+  .close-menu:hover {
+    transform: scale(1.2);
   }
 
   .nav-menu.active {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1px;
+    transform: translateY(0);
   }
 
   .nav-menu ul {
     flex-direction: column;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  align-items: center;
-  gap: 2px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
   }
 
   .nav-menu ul li {
     width: 100%;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   .nav-menu ul li a {
-    font-size: 16px;
+    font-size: 24px;
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: background 0.3s;
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-weight: bold;
   }
 
   .nav-menu ul li a:hover {
-    background-color: rgba(15, 42, 123, 0.61);
-    color: white;
-    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: scale(1.05);
   }
 
   .floating-character {
@@ -654,7 +702,38 @@ img {
     left: -10px;
   }
 
+  /* Ajustes para reduzir conteúdos no mobile */
+  .sobre {
+    padding: 10px;
+  }
 
+  .metodologia {
+    padding: 10px;
+  }
+
+  .metodologia-content {
+    padding: 5px;
+  }
+
+  .modalidade {
+    padding: 10px;
+  }
+
+  .modalidade-content {
+    padding: 5px;
+  }
+
+  .cursos-populares {
+    padding: 5px 10px 10px;
+  }
+
+  .neon-section {
+    padding: 20px 10px;
+  }
+
+  .neon-container {
+    padding: 5px;
+  }
 }
 
 

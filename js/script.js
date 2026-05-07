@@ -8,9 +8,21 @@ document.querySelectorAll('.scroll-nav .dot').forEach(dot => {
 
 const toggleBtn = document.getElementById('menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const closeBtn = document.querySelector('.close-menu');
 
 toggleBtn.addEventListener('click', () => {
   navMenu.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  navMenu.classList.remove('active');
+});
+
+// Fechar menu ao clicar em um link
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
 });
 
 
