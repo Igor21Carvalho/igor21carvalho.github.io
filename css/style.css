@@ -1820,9 +1820,11 @@ footer {
 /* ===== RESPONSIVO ===== */
 
 @media (max-width: 768px) {
+ 
   .neon-section {
-    padding: 40px 20px;
+    padding:100px 20px;
     min-height: 420px;
+    
   }
 
   .neon-container {
