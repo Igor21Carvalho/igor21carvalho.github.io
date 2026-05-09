@@ -937,9 +937,8 @@ img {
 
 .btn-curso {
   display: inline-block;
-  margin: 100px;
-  font-size: 20px;
-  margin-top: 15px;
+  margin: 15px auto;
+  font-size: 1rem;
   background: #ca0808;
   color: white;
   padding: 10px 18px;
@@ -949,6 +948,34 @@ img {
     drop-shadow(0 0 1000px #fff)
     drop-shadow(0 0 15px #4da0ff)
     drop-shadow(0 0 50px #4baeff);
+}
+
+@media (max-width: 768px) {
+  .btn-curso {
+    display: inline-flex;
+    justify-content: center;
+    margin: 15px auto;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+
+  .faixa-final {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: 90%;
+    max-width: 340px;
+    display: block;
+    margin: 15px auto 0;
+    padding: 12px 16px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.4;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  }
 }
 /* #endregion cursos*/
 
@@ -1793,9 +1820,15 @@ footer {
 /* ===== RESPONSIVO ===== */
 
 @media (max-width: 768px) {
+  .neon-section {
+    padding: 40px 20px;
+    min-height: 420px;
+  }
+
   .neon-container {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
   .neon-container.reverse {
@@ -1803,11 +1836,21 @@ footer {
   }
 
   .neon-text h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
+  }
+
+  .neon-text h3,
+  .neon-text p {
+    font-size: 1.05rem;
   }
 
   .neon-img img {
-    max-width: 200px;
+    max-width: 240px;
+  }
+
+  .neon-btn {
+    padding: 10px 22px;
+    font-size: 1rem;
   }
 
   .neon-astronauta img {
