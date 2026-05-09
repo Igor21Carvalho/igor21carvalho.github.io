@@ -702,6 +702,25 @@ img {
     left: -10px;
   }
 
+  .carrossel {
+    width: 100%;
+    max-width: 320px;
+    height: 240px;
+  }
+
+  .sobre-alunos img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+
+  .foguete-branco img {
+    width: 100%;
+    max-width: 280px;
+    margin-top: -60px;
+    margin-bottom: -100px;
+  }
+
   /* Ajustes para reduzir conteúdos no mobile */
   .sobre {
     padding: 10px;
@@ -848,6 +867,16 @@ img {
 @media (max-width: 600px) {
   .grid-cursos {
     grid-template-columns: 1fr;
+    grid-auto-rows: minmax(420px, auto);
+    max-height: calc(3 * 420px + 40px);
+    overflow-y: auto;
+    scroll-snap-type: y proximity;
+    padding-right: 10px;
+  }
+
+  .card-curso {
+    min-height: 420px;
+    scroll-snap-align: start;
   }
 }
 
@@ -1510,38 +1539,49 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  .modalidade{
-    margin: 10x;
-    padding: 10px;
-
+  .modalidade {
+    margin: 0;
+    padding: 20px 12px;
   }
+
   .modalidade-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 20px;
     margin: 0;
     padding: 0;
   }
 
+  .modalidade-img,
+  .modalidade-texto {
+    width: 100%;
+    max-width: 560px;
+  }
+
   .modalidade-img img {
-    max-width: 250px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .modalidade-texto {
+    max-width: 100%;
+  }
+
+  .modalidade-texto h2 {
+    font-size: 1.8rem;
   }
 
   .botoes-modalidade {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
-  .neon-astronauta2{
- display: none;
 
-}
-
-.neon-astronauta2 img {
-  width: 200px;
-  filter: 
-    drop-shadow(0 0 5px #fff)
-    drop-shadow(0 0 15px #4da0ff)
-    drop-shadow(0 0 50px #4baeff);
-}
-
+  .neon-astronauta2 {
+    display: none;
+  }
 }
 /* ===== ASTRONAUTA ENTRE SECTIONS ===== */
 
@@ -1621,11 +1661,10 @@ footer {
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .metodologia-content {
-    flex-direction: column-reverse; /* imagem vai pra cima */
+    flex-direction: column;
     text-align: center;
-   margin: 0;
-   padding: 0;
-
+    margin: 0;
+    padding: 0;
   }
 
   .metodologia-img img {
