@@ -867,16 +867,17 @@ img {
 @media (max-width: 600px) {
   .grid-cursos {
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(420px, auto);
-    max-height: calc(3 * 420px + 40px);
-    overflow-y: auto;
-    scroll-snap-type: y proximity;
+    grid-template-rows: repeat(3, 320px);
+    height: calc(3 * 320px + 20px);
+    overflow: hidden;
     padding-right: 10px;
+    gap: 10px;
+    align-content: start;
   }
 
   .card-curso {
-    min-height: 420px;
-    scroll-snap-align: start;
+    min-height: 320px;
+    margin-bottom: 0;
   }
 }
 
