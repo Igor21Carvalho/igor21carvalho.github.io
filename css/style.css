@@ -1832,7 +1832,7 @@ footer {
   }
 
   .neon-container.reverse {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .neon-text h2 {
